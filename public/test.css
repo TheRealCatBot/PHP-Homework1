@@ -1,0 +1,25 @@
+.card.border-success {
+    border-color: rgb(5, 219, 76) !important;
+}
+
+.card.border-warning {
+    border-color: rgb(50, 136, 0) !important;
+}
+
+footer {
+    padding: 10px 0;
+    background-color: #636161;
+    border: 1px solid #dfdfdf;
+    border-radius: 3px;
+}
+
+form.form-inline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    background-color: #2b2828;
+}
+

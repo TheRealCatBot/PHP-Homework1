@@ -11,7 +11,7 @@
 
 @section('content')
 <div class="row">
-    @foreach($quizebi as $quiz)
+    @foreach($quizzes as $quiz)
         <div class="col-md-4 mb-4">
             <div class="card {{ $quiz['status'] == 'completed' ? 'border-success' : 'border-warning' }}">
                 <img src="{{ asset($quiz['photo']) }}" alt="{{ $quiz['name'] }}" class="card-img-top">
@@ -22,6 +22,14 @@
             </div>
         </div>
     @endforeach
+
+@foreach (App\Models\Quiz::all() as $quiz)
+    <div>
+        <h2>{{ $quiz->name }}</h2>
+        <p>{{ $quiz->description }}</p>
+    </div>
+@endforeach
+
 </div>
 
 <footer class="mt-5">

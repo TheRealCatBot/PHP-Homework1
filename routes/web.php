@@ -20,3 +20,9 @@ Route::get('/', function () {
 Route::get('/quizebi', [QuizController::class, 'index']);
 Route::get('/quiz/{id?}', [QuizController::class, 'edit'])->name('quiz.edit');
 Route::post('/quiz/{id?}', [QuizController::class, 'store']);
+
+Route::middleware('mech')->group(function () {
+    Route::get('/mech', function () {
+        return "mech mech";
+    });
+});
